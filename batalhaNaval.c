@@ -6,31 +6,43 @@
 
 int main() {
     #include <stdio.h>
-        int tabuleiro [10][10] = {
-            {0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0},
-            {0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0},
-            {0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0},
-            {0, 0, 0, 3 ,3 ,3 ,0 ,0 ,0 ,0},
-            {0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0},
-            {0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0},
-            {0, 0, 0, 0 ,0 ,0 ,0 ,0 ,3 ,0},
-            {0, 0, 0, 0 ,0 ,0 ,0 ,0 ,3 ,0},
-            {0, 0, 0, 0 ,0 ,0 ,0 ,0 ,3 ,0},
-            {0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0}
+    int tabuleiro [10][10] = {
+        {0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0},
+        {0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0},
+        {0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0},
+        {0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0},
+        {0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0},
+        {0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0},
+        {0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0},
+        {0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0},
+        {0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0},
+        {0, 0, 0, 0 ,0 ,0 ,0 ,0 ,0 ,0}
+
+    };
+
+    int navio1 = 3;
+    int navio2 = 3;
+    navio1 = tabuleiro[2][3] = 3;
+    navio1 = tabuleiro[2][4] = 3;
+    navio1 = tabuleiro[2][5] = 3;
+    navio2 = tabuleiro[8][4] = 3;
+    navio2 = tabuleiro[8][5] = 3;
+    navio2 = tabuleiro[8][6] = 3;
+       
     
-        };
-            //printando na tela o tabuleiro
-        printf("\n   0 1 2 3 4 5 6 7 8 9\n\n"); //numeração colunas
-        for (int i = 0; i < 10; i++) {
-            printf("%d  ", i); // Numeração das linhas
-            for (int j = 0; j < 10; j++) {
-                printf("%d ", tabuleiro[i][j]);
-            }
-            printf("\n");
+    
+    
+    //printando na tela o tabuleiro
+    printf("\n   0 1 2 3 4 5 6 7 8 9\n\n"); //numeração colunas
+    for (int i = 0; i < 10; i++) {
+        printf("%d  ", i); // Numeração das linhas
+        for (int j = 0; j < 10; j++) {
+            printf("%d ", tabuleiro[i][j]);
         }
+        printf("\n\n");
+    }
     
-        return 0;
-    }    
+       
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
     // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
     // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
